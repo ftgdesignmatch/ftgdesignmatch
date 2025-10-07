@@ -251,6 +251,20 @@ const Messages = () => {
       <header className="relative z-10 border-b border-border/50 backdrop-blur-sm bg-background/80">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-4">
+<<<<<<< HEAD
+=======
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={() => navigate('/dashboard')}
+              className="text-muted-foreground hover:text-primary"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Dashboard
+            </Button>
+          </div>
+          <div className="flex items-center space-x-4">
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
             <img 
               src="./images/IMG-20250419-WA0166-removebg-preview (1).png" 
               alt="FTG Logo" 

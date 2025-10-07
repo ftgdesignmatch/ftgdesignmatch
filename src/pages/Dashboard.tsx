@@ -17,9 +17,13 @@ import {
   Edit,
   Users,
   CheckCircle,
+<<<<<<< HEAD
   AlertCircle,
   Menu,
   X
+=======
+  AlertCircle
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
@@ -40,7 +44,10 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+=======
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
   const [stats, setStats] = useState({
     totalProjects: 0,
     activeProjects: 0,
@@ -227,6 +234,7 @@ const Dashboard = () => {
               <p className="text-xs text-muted-foreground">by FTG</p>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <Button variant="ghost" onClick={() => navigate('/dashboard')}>Dashboard</Button>
@@ -317,6 +325,19 @@ const Dashboard = () => {
             </div>
           </div>
         )}
+=======
+          <nav className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+            <div className="flex flex-wrap justify-center md:justify-start items-center gap-2 md:gap-4">
+              <Button variant="ghost" size="sm" onClick={() => navigate('/dashboard')}>Dashboard</Button>
+              <Button variant="ghost" size="sm" onClick={() => navigate('/projects')}>Projects</Button>
+              <Button variant="ghost" size="sm" onClick={() => navigate('/messages')}>Messages</Button>
+              <Button variant="ghost" size="sm" onClick={() => navigate('/profile')}>Profile</Button>
+              <Button variant="ghost" size="sm" onClick={() => navigate('/settings')}>Settings</Button>
+            </div>
+            <Button variant="outline" size="sm" onClick={handleSignOut}>Sign Out</Button>
+          </nav>
+        </div>
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
       </header>
 
       <div className="relative z-10 py-8 px-4">

@@ -2,12 +2,21 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { Star, Users, Briefcase, CreditCard, Shield, Zap, Menu, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
 const Index = () => {
   const [user, setUser] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+=======
+import { Star, Users, Briefcase, CreditCard, Shield, Zap } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useNavigate } from "react-router-dom";
+
+const Index = () => {
+  const [user, setUser] = useState(null);
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -69,22 +78,36 @@ const Index = () => {
               <p className="text-xs text-muted-foreground">by FTG</p>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="text-foreground hover:text-primary transition-colors">Features</button>
             <button onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} className="text-foreground hover:text-primary transition-colors">How it Works</button>
             <button onClick={() => navigate('/about')} className="text-foreground hover:text-primary transition-colors">About Us</button>
+=======
+          <nav className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+              <button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="text-foreground hover:text-primary transition-colors">Features</button>
+              <button onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} className="text-foreground hover:text-primary transition-colors">How it Works</button>
+              <button onClick={() => navigate('/about')} className="text-foreground hover:text-primary transition-colors">About Us</button>
+            </div>
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
             {user ? (
               <Button variant="outline" onClick={() => supabase.auth.signOut()}>
                 Sign Out
               </Button>
             ) : (
+<<<<<<< HEAD
               <div className="flex space-x-2">
+=======
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
                 <Button variant="outline" onClick={() => navigate('/auth')}>Sign In</Button>
                 <Button onClick={() => navigate('/auth')}>Get Started</Button>
               </div>
             )}
           </nav>
+<<<<<<< HEAD
 
           {/* Mobile Menu Button */}
           <Button
@@ -167,6 +190,9 @@ const Index = () => {
             </div>
           </div>
         )}
+=======
+        </div>
+>>>>>>> 91618263e2cde560237368da5db3e3b3df6a4081
       </header>
 
       {/* Hero Section */}
