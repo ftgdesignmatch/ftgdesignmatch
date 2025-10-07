@@ -1,0 +1,1 @@
+Note: The founder image IMG-20250419-WA0161_3339.jpg should be manually uploaded to /workspace/ftg_designmatch/public/images/ and the About.tsx file should be updated to use './images/IMG-20250419-WA0161_3339.jpg' as the src.
